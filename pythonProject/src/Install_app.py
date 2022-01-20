@@ -1,6 +1,3 @@
 from selenium import webdriver
 
 driver = webdriver.Chrome()
-...
-...
-88888
