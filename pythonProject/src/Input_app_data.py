@@ -1,5 +1,22 @@
 import json,os
 
-class Input_phone_data():
+class Input_phone_data(object):
     """用户输入手机数据"""
+    i = 0
+    desired_caps = {
+        "platformName":"",
+        "platformVersion":"",
+        "deviceName":"",
+        "appPackage":"",
+        "appActivity":"",
+        "unicodeKeyboard":"",
+        "resetKeyboard":""
+    }
+    for (key, value) in desired_caps.items():
+        result = input("请输入" + key + ":")
+        desired_caps[key] = result
+        i += 1
+
+    print(desired_caps)
+        
     
