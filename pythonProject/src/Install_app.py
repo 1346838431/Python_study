@@ -17,7 +17,16 @@ class Install_app(Drvier):
                     print("正在卸载当前版本....")
                     driver.remove_app(app_data)
                     print("卸载已完成")
-                    break
+                    result_two = str(input("是否安装软件(y/n):"))
+                    while(True):
+                        if 'y' == result_two or 'Y' == result_two:
+                            print("正在安装软件....")
+                            driver.install_app(
+                                "pythonProject/data/qyt_v1.6.5_build2743.apk")
+                            result_three = str(input("软件已安装成功!是否退出程序(y/n):"))
+                            while(True):
+                                ...
+
                 
                 elif "n" == result or "Y" == result:
                     print("好的!已保留该软件")
@@ -39,4 +48,10 @@ class Install_app(Drvier):
 
 
         except:
+            ...
+    
+    else:
+        # print("该软件不存在,请问是否安装新版本的app(y/n):")
+        result = str(input("该软件不存在,请问是否安装新版本的app(y/n):"))
+        if 'y' == result or 'Y' == result:
             ...
