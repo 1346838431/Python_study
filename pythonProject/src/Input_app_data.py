@@ -1,9 +1,7 @@
-from pythonProject.src.path import Path
+# from pythonProject.src.test import Path
 
-class Input_phone_data(Path):
+class Input_phone_data(object):
     """用户输入手机数据"""
-
-    path = Path()
     desired_caps = {
         "platformName":"",
         "platformVersion":"",
