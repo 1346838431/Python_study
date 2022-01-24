@@ -1,4 +1,5 @@
 import os, sys
 
-print(os.getcwd())
-print(os.chdir(os.getcwd()))
+class Path(object):
+    """项目路径"""
+    sys.path.append(os.getcwd())

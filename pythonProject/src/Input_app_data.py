@@ -1,8 +1,9 @@
-import json,os
+from pythonProject.src.path import Path
 
-class Input_phone_data(object):
+class Input_phone_data(Path):
     """用户输入手机数据"""
-    i = 0
+
+    path = Path()
     desired_caps = {
         "platformName":"",
         "platformVersion":"",
@@ -15,7 +16,6 @@ class Input_phone_data(object):
     for (key, value) in desired_caps.items():
         result = input("请输入" + key + ":")
         desired_caps[key] = result
-        i += 1
 
     print(desired_caps)
         
