@@ -6,15 +6,16 @@ class Install_app(Drvier):
     """安装卸载app"""
     Drvier = Drvier()
     driver = Drvier.driver
+    app_data = str(input("请输入需要查找的app包名:"))
 
-    if driver.is_app_installed('com.shusheng.qyt'):
+    if driver.is_app_installed(app_data):
         try:
             print("该软件已存在!")
             result = str(input("是否卸载当前版本的软件(y/n):"))
             while(True):
                 if "y" == result or "Y" == result:
                     print("正在卸载当前版本....")
-                    driver.remove_app('com.shusheng.com')
+                    driver.remove_app(app_data)
                     print("卸载已完成")
                     break
                 
