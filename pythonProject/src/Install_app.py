@@ -32,7 +32,10 @@ class Install_app(Drvier):
                                     driver.quit()
                                 else:
                                     print("请正常输入!")
-
+                        elif 'n' == result_two or 'N' == result_two:
+                            print("好的!正在退出程序....")
+                            driver.quit()
+                            print("程序已退出!")
                 
                 elif "n" == result or "Y" == result:
                     print("好的!已保留该软件")
@@ -53,8 +56,9 @@ class Install_app(Drvier):
                     print("请按规则输入!")
 
 
-        except:
-            ...
+        except Exception as e:
+            """抛出所有异常到指定目录"""
+            print(e)
     
     else:
         # print("该软件不存在,请问是否安装新版本的app(y/n):")
