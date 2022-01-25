@@ -63,5 +63,8 @@ class Install_app(Drvier):
     else:
         # print("该软件不存在,请问是否安装新版本的app(y/n):")
         result = str(input("该软件不存在,请问是否安装新版本的app(y/n):"))
-        if 'y' == result or 'Y' == result:
-            ...
+        while(True):
+            if 'y' == result or 'Y' == result:
+                print("正在安装app>>>")
+                if driver.install_app("pythonProject/data/qyt_v1.6.5_build2743.apk"):
+                    ...
