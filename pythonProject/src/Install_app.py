@@ -25,7 +25,13 @@ class Install_app(Drvier):
                                 "pythonProject/data/qyt_v1.6.5_build2743.apk")
                             result_three = str(input("软件已安装成功!是否退出程序(y/n):"))
                             while(True):
-                                ...
+                                if 'y' == result_three or 'N' == result_three:
+                                    driver.quit()
+                                elif 'n' == result_three or 'N' == result_three:
+                                    print("暂无其他功能!!正在退出程序....")
+                                    driver.quit()
+                                else:
+                                    print("请正常输入!")
 
                 
                 elif "n" == result or "Y" == result:
